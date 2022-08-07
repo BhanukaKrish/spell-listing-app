@@ -1,0 +1,33 @@
+.searchBox {
+  display: flex;
+  background: #fff;
+  border-radius: 8px;
+  align-items: center;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow-base);
+  padding: 15px 20px;
+  margin-top: 35px;
+}
+
+.searchBox > input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: var(--font-size-lg);
+  font-weight: 300;
+  color: #000;
+}
+
+.search_btn {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

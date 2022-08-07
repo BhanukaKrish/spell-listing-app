@@ -1,9 +1,25 @@
-import React from 'react'
+import React from "react";
+import ItemRow from "../components/ItemRow";
+import SearchBox from "../components/SearchBox";
+import useAllSpells from "../hooks/useAllSpells";
+import style from "./style.module.css";
 
-const Home = () => {
+function Home() {
+  const [filterData, setFilterData] = React.useState("");
+  const allUserList = useAllSpells(filterData);
+
   return (
-    <div>Home</div>
-  )
+    <>
+      <SearchBox filterData={filterData} setFilterData={setFilterData}/>
+      <div className="container">
+        <div className={style.main_box}>
+          {allUserList.map((item) => (
+            <ItemRow key={item.index} item={item} />
+          ))}
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Home
+export default Home;
