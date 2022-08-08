@@ -11,7 +11,7 @@ function useSpellData(filterData) {
    * TODO - pass the filterData to the api call.
    * @param {string} filterData - spell index value.
    */
-  
+
   useEffect(() => {
     const getData = () => {
       Progress.show();
@@ -24,7 +24,6 @@ function useSpellData(filterData) {
     if (filterData) {
       getData();
     }
-    // eslint-disable-next-line
   }, [filterData]);
   return state;
 }

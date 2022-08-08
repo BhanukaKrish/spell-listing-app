@@ -22,7 +22,6 @@ function useAllSpells(filterData) {
       });
     };
     getData();
-    // eslint-disable-next-line
   }, [filterData]);
   return state;
 }
