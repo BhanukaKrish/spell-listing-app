@@ -4,6 +4,7 @@ import Logo from "../../assets/images/DnD-Logo.png";
 import { Link } from "react-router-dom";
 
 function Header() {
+  //* Main header component
   return (
     <div className={style.header_bar}>
       <div className="container">
@@ -17,7 +18,7 @@ function Header() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/favourites">favourites</Link>
+                <Link to="/favourites">Favourites</Link>
               </li>
             </ul>
           </div>

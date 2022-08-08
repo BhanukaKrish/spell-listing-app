@@ -9,6 +9,7 @@ import SpellDescriptions from "./SpellDescriptions";
 import { useFaveStore } from "../../store";
 
 function ItemRow({ item }) {
+  // * Get the favourite spells from the store.
   const setSpellFave = useFaveStore((state) => state.setSpellFave);
   const spellFave = useFaveStore((state) => state.spellFave);
 
@@ -16,11 +17,20 @@ function ItemRow({ item }) {
   const [selectedSpell, setSelectedSpell] = useState(null);
   const getSpellData = useSpellData(selectedSpell);
 
+  /**
+   * Toggle the show/hide state of the spell description.
+   * @param {string} spell - spell index value.
+   * @param {string} flag - show/hide flag.
+   */
   const handleShow = (spell, flag) => {
     setSelectedSpell(spell);
     setShow(flag);
   };
 
+  /**
+   * Toggle the favourite spell.
+   * @param {string} spell - The spell object.
+   */
   const handleFavorite = (spell) => {
     const fave = [...spellFave];
     if (fave.filter((item) => item.index === spell.index).length > 0) {
@@ -45,8 +55,7 @@ function ItemRow({ item }) {
               <MdFavoriteBorder />
             </div>
           )}
-          {/* */}
-
+          
           {show ? (
             <div
               className={style.expandBtn}

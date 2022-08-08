@@ -6,6 +6,12 @@ import { apis } from "../properties";
 function useAllSpells(filterData) {
   const [state, setState] = useState([]);
 
+  /**
+   * Get the all spells from the api call. This is a custom hook.
+   * TODO - pass the filterData to the api call.
+   * @param {string} filterData - The search input value.
+   */
+
   useEffect(() => {
     const getData = () => {
       Progress.show();

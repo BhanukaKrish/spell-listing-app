@@ -12,12 +12,9 @@ function SearchBox({ filterData, setFilterData }) {
           value={filterData}
           onChange={(e) => setFilterData(e.target.value)}
         />
-        <div
-          className={style.search_btn}
-          onClick={() => setFilterData(filterData)}
-        >
+        <button type="button" value="Search" className={style.search_btn}>
           <BsSearch />
-        </div>
+        </button>
       </div>
     </div>
   );
