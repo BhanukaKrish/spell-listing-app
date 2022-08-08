@@ -4,3 +4,12 @@
   overflow: auto;
   padding: 10px;
 }
+
+@media only screen and (max-width: 768px) {
+  .main_box {
+    /* max-height: none; */
+    margin-top: 10px;
+    padding: 0;
+
+  }
+}
